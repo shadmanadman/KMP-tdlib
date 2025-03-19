@@ -1,0 +1,2 @@
+package = tdlib
+headers = td_json_client.h
