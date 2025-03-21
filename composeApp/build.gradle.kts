@@ -75,6 +75,8 @@ android {
             isMinifyEnabled = false
         }
     }
+    sourceSets["main"].java.srcDirs("src/androidMain/java")
+    sourceSets["main"].jniLibs.srcDir("src/androidMain/jniLibs")
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
