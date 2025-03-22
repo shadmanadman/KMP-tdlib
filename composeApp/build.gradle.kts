@@ -87,6 +87,10 @@ dependencies {
     debugImplementation(compose.uiTooling)
 }
 
+tasks.withType<JavaExec> {
+    val libPath = projectDir.absolutePath + "/native/macos"
+    systemProperty("java.library.path", libPath)
+}
 compose.desktop {
     application {
         mainClass = "org.adman.kmp.tdlib.MainKt"
