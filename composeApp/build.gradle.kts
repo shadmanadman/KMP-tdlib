@@ -26,6 +26,10 @@ kotlin {
             baseName = "ComposeApp"
             isStatic = true
         }
+        iosTarget.compilations["main"].cinterops.create("tdlib"){
+            definitionFile = file("nativeInterop/cinterop/tdlib.def")
+            includeDirs("native/include/td/telegram")
+        }
     }
     
     jvm("desktop")
